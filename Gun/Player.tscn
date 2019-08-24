@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Player.gd" type="Script" id=1]
+[ext_resource path="res://Bullet.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Gun.tscn" type="PackedScene" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 25.0404, 17.1207 )
+
+[node name="Player" type="KinematicBody2D"]
+position = Vector2( 0.7545, 0.0767112 )
+script = ExtResource( 1 )
+bullet_speed = 4000
+shot_interval = 0.02
+bullet_scene = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -25.0
+margin_top = -17.0
+margin_right = 25.0
+margin_bottom = 17.0
+rect_pivot_offset = Vector2( 20.0174, 20.0053 )
+color = Color( 0.0862745, 0.870588, 1, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -2.24109, -0.0426874 )
+shape = SubResource( 1 )
+
+[node name="Gun" parent="." instance=ExtResource( 3 )]
+scale = Vector2( 0.181573, 0.181573 )
+
+[node name="Spawn_Point" type="Position2D" parent="Gun"]
+position = Vector2( 214.208, -0.352649 )
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true

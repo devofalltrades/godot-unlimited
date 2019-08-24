@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=2]
+
+[sub_resource type="CanvasItemMaterial" id=4]
+blend_mode = 1
+
+[sub_resource type="Gradient" id=1]
+
+[sub_resource type="OpenSimplexNoise" id=2]
+
+[sub_resource type="NoiseTexture" id=3]
+noise = SubResource( 2 )
+
+[node name="Line2D" type="Line2D"]
+show_behind_parent = true
+material = SubResource( 4 )
+width = 3.0
+default_color = Color( 1, 1, 1, 1 )
+gradient = SubResource( 1 )
+texture = SubResource( 3 )
+texture_mode = 2

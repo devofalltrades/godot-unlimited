@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 9.49288, 18.4888 )
+
+[node name="Target" type="RigidBody2D"]
+mass = 1.16
+gravity_scale = 16.33
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -9.88402
+margin_top = -18.8147
+margin_right = 9.11598
+margin_bottom = 0.185337
+rect_scale = Vector2( 1, 1.90726 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -0.494886, -0.461816 )
+shape = SubResource( 1 )

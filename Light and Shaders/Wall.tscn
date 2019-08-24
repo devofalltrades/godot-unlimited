@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+[sub_resource type="OccluderPolygon2D" id=2]
+cull_mode = 2
+polygon = PoolVector2Array( -9.95313, -10.9873, 10.0161, -11.0248, 10.05, 11.1138, -10.0548, 11.1138 )
+
+[node name="Wall" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="CollisionShape2D"]
+margin_left = -9.77549
+margin_top = -10.2366
+margin_right = 10.2245
+margin_bottom = 9.76341
+color = Color( 0, 0, 0, 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+scale = Vector2( 0.998875, 0.902526 )
+occluder = SubResource( 2 )
