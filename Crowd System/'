@@ -1,0 +1,16 @@
+extends KinematicBody2D
+
+var location
+var speed = 10
+
+
+func _ready():
+	location = position
+
+func _physics_process(delta):
+	print(location, speed)
+	move_and_slide(position.direction_to(location) * speed)
+
+func move(position, magnitude):
+	location = position
+	speed = magnitude

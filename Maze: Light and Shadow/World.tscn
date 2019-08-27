@@ -5,18 +5,18 @@
 [ext_resource path="res://player.gd" type="Script" id=3]
 [ext_resource path="res://light.png" type="Texture" id=4]
 
-[sub_resource type="CanvasItemMaterial" id=5]
+[sub_resource type="CanvasItemMaterial" id=1]
 light_mode = 2
 
-[sub_resource type="CanvasItemMaterial" id=3]
+[sub_resource type="CanvasItemMaterial" id=2]
 light_mode = 2
+
+[sub_resource type="RectangleShape2D" id=3]
 
 [sub_resource type="RectangleShape2D" id=4]
-
-[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 19.9843, 20.029 )
 
-[sub_resource type="OccluderPolygon2D" id=1]
+[sub_resource type="OccluderPolygon2D" id=5]
 polygon = PoolVector2Array( 0, 0, 0, 40, 40, 40, 40, 0 )
 
 [sub_resource type="RectangleShape2D" id=6]
@@ -42,7 +42,7 @@ rect_scale = Vector2( 26.5435, 16.0808 )
 color = Color( 0, 0, 0, 1 )
 
 [node name="whtie bg" type="Node2D" parent="."]
-material = SubResource( 5 )
+material = SubResource( 1 )
 
 [node name="ColorRect" type="ColorRect" parent="whtie bg"]
 margin_left = -86.1462
@@ -77,7 +77,7 @@ text = "RUN!"
 [node name="grass" type="Sprite" parent="."]
 visible = false
 modulate = Color( 0, 0.556863, 0.258824, 1 )
-material = SubResource( 3 )
+material = SubResource( 2 )
 position = Vector2( 506.4, 334.5 )
 scale = Vector2( 1.7075, 1.7075 )
 texture = ExtResource( 1 )
@@ -97,7 +97,7 @@ __meta__ = {
 speed = 200
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
-shape = SubResource( 4 )
+shape = SubResource( 3 )
 
 [node name="ColorRect" type="ColorRect" parent="player"]
 margin_left = -9.97408
@@ -126,10 +126,10 @@ scale = Vector2( 1.53905, 1.57298 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls"]
 position = Vector2( 20.0267, 20.0391 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Walls"]
-occluder = SubResource( 1 )
+occluder = SubResource( 5 )
 
 [node name="ColorRect" type="ColorRect" parent="Walls"]
 margin_right = 40.0
@@ -143,10 +143,10 @@ scale = Vector2( 1.53905, 1.57298 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls3"]
 position = Vector2( 20.0267, 20.0391 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Walls3"]
-occluder = SubResource( 1 )
+occluder = SubResource( 5 )
 
 [node name="ColorRect" type="ColorRect" parent="Walls3"]
 margin_right = 40.0
@@ -160,10 +160,10 @@ scale = Vector2( 1.53905, 1.57298 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls4"]
 position = Vector2( 20.0267, 20.0391 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Walls4"]
-occluder = SubResource( 1 )
+occluder = SubResource( 5 )
 
 [node name="ColorRect" type="ColorRect" parent="Walls4"]
 margin_right = 40.0
@@ -177,10 +177,10 @@ scale = Vector2( 1.53905, 1.57298 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls5"]
 position = Vector2( 20.0267, 20.0391 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Walls5"]
-occluder = SubResource( 1 )
+occluder = SubResource( 5 )
 
 [node name="ColorRect" type="ColorRect" parent="Walls5"]
 margin_right = 40.0
@@ -194,10 +194,10 @@ scale = Vector2( 1.53905, 1.57298 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls6"]
 position = Vector2( 20.0267, 20.0391 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Walls6"]
-occluder = SubResource( 1 )
+occluder = SubResource( 5 )
 
 [node name="ColorRect" type="ColorRect" parent="Walls6"]
 margin_right = 40.0
@@ -211,10 +211,10 @@ scale = Vector2( 1.53905, 1.57298 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls7"]
 position = Vector2( 20.0267, 20.0391 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Walls7"]
-occluder = SubResource( 1 )
+occluder = SubResource( 5 )
 
 [node name="ColorRect" type="ColorRect" parent="Walls7"]
 margin_right = 40.0
@@ -228,10 +228,10 @@ scale = Vector2( 1.53905, 1.57298 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls8"]
 position = Vector2( 20.0267, 20.0391 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Walls8"]
-occluder = SubResource( 1 )
+occluder = SubResource( 5 )
 
 [node name="ColorRect" type="ColorRect" parent="Walls8"]
 margin_right = 40.0
@@ -245,10 +245,10 @@ scale = Vector2( 1.53905, 1.57298 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls9"]
 position = Vector2( 20.0267, 20.0391 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Walls9"]
-occluder = SubResource( 1 )
+occluder = SubResource( 5 )
 
 [node name="ColorRect" type="ColorRect" parent="Walls9"]
 margin_right = 40.0
@@ -262,10 +262,10 @@ scale = Vector2( 1.53905, 1.57298 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls10"]
 position = Vector2( 20.0267, 20.0391 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Walls10"]
-occluder = SubResource( 1 )
+occluder = SubResource( 5 )
 
 [node name="ColorRect" type="ColorRect" parent="Walls10"]
 margin_right = 40.0
@@ -279,10 +279,10 @@ scale = Vector2( 1.53905, 1.57298 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls11"]
 position = Vector2( 20.0267, 20.0391 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Walls11"]
-occluder = SubResource( 1 )
+occluder = SubResource( 5 )
 
 [node name="ColorRect" type="ColorRect" parent="Walls11"]
 margin_right = 40.0
@@ -296,10 +296,10 @@ scale = Vector2( 1.53905, 1.57298 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls12"]
 position = Vector2( 20.0267, 20.0391 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Walls12"]
-occluder = SubResource( 1 )
+occluder = SubResource( 5 )
 
 [node name="ColorRect" type="ColorRect" parent="Walls12"]
 margin_right = 40.0
@@ -313,10 +313,10 @@ scale = Vector2( 1.53905, 1.57298 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls13"]
 position = Vector2( 20.0267, 20.0391 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Walls13"]
-occluder = SubResource( 1 )
+occluder = SubResource( 5 )
 
 [node name="ColorRect" type="ColorRect" parent="Walls13"]
 margin_right = 40.0
@@ -330,10 +330,10 @@ scale = Vector2( 1.53905, 1.57298 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls14"]
 position = Vector2( 20.0267, 20.0391 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Walls14"]
-occluder = SubResource( 1 )
+occluder = SubResource( 5 )
 
 [node name="ColorRect" type="ColorRect" parent="Walls14"]
 margin_right = 40.0
@@ -347,10 +347,10 @@ scale = Vector2( 1.53905, 1.57298 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls15"]
 position = Vector2( 20.0267, 20.0391 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Walls15"]
-occluder = SubResource( 1 )
+occluder = SubResource( 5 )
 
 [node name="ColorRect" type="ColorRect" parent="Walls15"]
 margin_right = 40.0
@@ -364,10 +364,10 @@ scale = Vector2( 1.53905, 1.57298 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls16"]
 position = Vector2( 20.0267, 20.0391 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Walls16"]
-occluder = SubResource( 1 )
+occluder = SubResource( 5 )
 
 [node name="ColorRect" type="ColorRect" parent="Walls16"]
 margin_right = 40.0
@@ -381,10 +381,10 @@ scale = Vector2( 1.53905, 1.57298 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls17"]
 position = Vector2( 20.0267, 20.0391 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Walls17"]
-occluder = SubResource( 1 )
+occluder = SubResource( 5 )
 
 [node name="ColorRect" type="ColorRect" parent="Walls17"]
 margin_right = 40.0
@@ -398,10 +398,10 @@ scale = Vector2( 1.53905, 1.57298 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls18"]
 position = Vector2( 20.0267, 20.0391 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Walls18"]
-occluder = SubResource( 1 )
+occluder = SubResource( 5 )
 
 [node name="ColorRect" type="ColorRect" parent="Walls18"]
 margin_right = 40.0
@@ -415,10 +415,10 @@ scale = Vector2( 1.53905, 1.57298 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls19"]
 position = Vector2( 20.0267, 20.0391 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Walls19"]
-occluder = SubResource( 1 )
+occluder = SubResource( 5 )
 
 [node name="ColorRect" type="ColorRect" parent="Walls19"]
 margin_right = 40.0
@@ -432,10 +432,10 @@ scale = Vector2( 1.53905, 1.57298 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls20"]
 position = Vector2( 20.0267, 20.0391 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Walls20"]
-occluder = SubResource( 1 )
+occluder = SubResource( 5 )
 
 [node name="ColorRect" type="ColorRect" parent="Walls20"]
 margin_right = 40.0
@@ -449,10 +449,10 @@ scale = Vector2( 1.53905, 1.57298 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls21"]
 position = Vector2( 20.0267, 20.0391 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Walls21"]
-occluder = SubResource( 1 )
+occluder = SubResource( 5 )
 
 [node name="ColorRect" type="ColorRect" parent="Walls21"]
 margin_right = 40.0
@@ -466,10 +466,10 @@ scale = Vector2( 1.53905, 1.57298 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls22"]
 position = Vector2( 20.0267, 20.0391 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Walls22"]
-occluder = SubResource( 1 )
+occluder = SubResource( 5 )
 
 [node name="ColorRect" type="ColorRect" parent="Walls22"]
 margin_right = 40.0
@@ -483,10 +483,10 @@ scale = Vector2( 1.53905, 1.57298 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls23"]
 position = Vector2( 20.0267, 20.0391 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Walls23"]
-occluder = SubResource( 1 )
+occluder = SubResource( 5 )
 
 [node name="ColorRect" type="ColorRect" parent="Walls23"]
 margin_right = 40.0
@@ -500,10 +500,10 @@ scale = Vector2( 1.53905, 1.57298 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls24"]
 position = Vector2( 20.0267, 20.0391 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Walls24"]
-occluder = SubResource( 1 )
+occluder = SubResource( 5 )
 
 [node name="ColorRect" type="ColorRect" parent="Walls24"]
 margin_right = 40.0
@@ -517,10 +517,10 @@ scale = Vector2( 1.53905, 1.57298 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls25"]
 position = Vector2( 20.0267, 20.0391 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Walls25"]
-occluder = SubResource( 1 )
+occluder = SubResource( 5 )
 
 [node name="ColorRect" type="ColorRect" parent="Walls25"]
 margin_right = 40.0
@@ -534,10 +534,10 @@ scale = Vector2( 1.53905, 1.57298 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls26"]
 position = Vector2( 20.0267, 20.0391 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Walls26"]
-occluder = SubResource( 1 )
+occluder = SubResource( 5 )
 
 [node name="ColorRect" type="ColorRect" parent="Walls26"]
 margin_right = 40.0
@@ -551,10 +551,10 @@ scale = Vector2( 1.53905, 1.57298 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls27"]
 position = Vector2( 20.0267, 20.0391 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Walls27"]
-occluder = SubResource( 1 )
+occluder = SubResource( 5 )
 
 [node name="ColorRect" type="ColorRect" parent="Walls27"]
 margin_right = 40.0
@@ -568,10 +568,10 @@ scale = Vector2( 1.53905, 1.57298 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls28"]
 position = Vector2( 20.0267, 20.0391 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Walls28"]
-occluder = SubResource( 1 )
+occluder = SubResource( 5 )
 
 [node name="ColorRect" type="ColorRect" parent="Walls28"]
 margin_right = 40.0
@@ -585,10 +585,10 @@ scale = Vector2( 1.53905, 1.57298 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls29"]
 position = Vector2( 20.0267, 20.0391 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Walls29"]
-occluder = SubResource( 1 )
+occluder = SubResource( 5 )
 
 [node name="ColorRect" type="ColorRect" parent="Walls29"]
 margin_right = 40.0
@@ -602,10 +602,10 @@ scale = Vector2( 1.53905, 1.57298 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls30"]
 position = Vector2( 20.0267, 20.0391 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Walls30"]
-occluder = SubResource( 1 )
+occluder = SubResource( 5 )
 
 [node name="ColorRect" type="ColorRect" parent="Walls30"]
 margin_right = 40.0
@@ -619,10 +619,10 @@ scale = Vector2( 1.53905, 1.57298 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls31"]
 position = Vector2( 20.0267, 20.0391 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Walls31"]
-occluder = SubResource( 1 )
+occluder = SubResource( 5 )
 
 [node name="ColorRect" type="ColorRect" parent="Walls31"]
 margin_right = 40.0
@@ -636,10 +636,10 @@ scale = Vector2( 1.53905, 1.57298 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls32"]
 position = Vector2( 20.0267, 20.0391 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Walls32"]
-occluder = SubResource( 1 )
+occluder = SubResource( 5 )
 
 [node name="ColorRect" type="ColorRect" parent="Walls32"]
 margin_right = 40.0
@@ -653,10 +653,10 @@ scale = Vector2( 1.53905, 1.57298 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls33"]
 position = Vector2( 20.0267, 20.0391 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Walls33"]
-occluder = SubResource( 1 )
+occluder = SubResource( 5 )
 
 [node name="ColorRect" type="ColorRect" parent="Walls33"]
 margin_right = 40.0
@@ -670,10 +670,10 @@ scale = Vector2( 1.53905, 1.57298 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls34"]
 position = Vector2( 20.0267, 20.0391 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Walls34"]
-occluder = SubResource( 1 )
+occluder = SubResource( 5 )
 
 [node name="ColorRect" type="ColorRect" parent="Walls34"]
 margin_right = 40.0
@@ -687,10 +687,10 @@ scale = Vector2( 1.53905, 1.57298 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls35"]
 position = Vector2( 20.0267, 20.0391 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Walls35"]
-occluder = SubResource( 1 )
+occluder = SubResource( 5 )
 
 [node name="ColorRect" type="ColorRect" parent="Walls35"]
 margin_right = 40.0
@@ -704,10 +704,10 @@ scale = Vector2( 1.53905, 1.57298 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls36"]
 position = Vector2( 20.0267, 20.0391 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Walls36"]
-occluder = SubResource( 1 )
+occluder = SubResource( 5 )
 
 [node name="ColorRect" type="ColorRect" parent="Walls36"]
 margin_right = 40.0
@@ -721,10 +721,10 @@ scale = Vector2( 1.53905, 1.57298 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls37"]
 position = Vector2( 20.0267, 20.0391 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Walls37"]
-occluder = SubResource( 1 )
+occluder = SubResource( 5 )
 
 [node name="ColorRect" type="ColorRect" parent="Walls37"]
 margin_right = 40.0
@@ -738,10 +738,10 @@ scale = Vector2( 1.53905, 1.57298 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls38"]
 position = Vector2( 20.0267, 20.0391 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Walls38"]
-occluder = SubResource( 1 )
+occluder = SubResource( 5 )
 
 [node name="ColorRect" type="ColorRect" parent="Walls38"]
 margin_right = 40.0
@@ -755,10 +755,10 @@ scale = Vector2( 1.53905, 1.57298 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls39"]
 position = Vector2( 20.0267, 20.0391 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Walls39"]
-occluder = SubResource( 1 )
+occluder = SubResource( 5 )
 
 [node name="ColorRect" type="ColorRect" parent="Walls39"]
 margin_right = 40.0
@@ -772,10 +772,10 @@ scale = Vector2( 1.53905, 1.57298 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls40"]
 position = Vector2( 20.0267, 20.0391 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Walls40"]
-occluder = SubResource( 1 )
+occluder = SubResource( 5 )
 
 [node name="ColorRect" type="ColorRect" parent="Walls40"]
 margin_right = 40.0
@@ -789,10 +789,10 @@ scale = Vector2( 1.53905, 1.57298 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls41"]
 position = Vector2( 20.0267, 20.0391 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Walls41"]
-occluder = SubResource( 1 )
+occluder = SubResource( 5 )
 
 [node name="ColorRect" type="ColorRect" parent="Walls41"]
 margin_right = 40.0
@@ -806,10 +806,10 @@ scale = Vector2( 1.53905, 1.57298 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls42"]
 position = Vector2( 20.0267, 20.0391 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Walls42"]
-occluder = SubResource( 1 )
+occluder = SubResource( 5 )
 
 [node name="ColorRect" type="ColorRect" parent="Walls42"]
 margin_right = 40.0
@@ -823,10 +823,10 @@ scale = Vector2( 1.53905, 1.57298 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls43"]
 position = Vector2( 20.0267, 20.0391 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Walls43"]
-occluder = SubResource( 1 )
+occluder = SubResource( 5 )
 
 [node name="ColorRect" type="ColorRect" parent="Walls43"]
 margin_right = 40.0
@@ -840,10 +840,10 @@ scale = Vector2( 1.53905, 1.57298 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls44"]
 position = Vector2( 20.0267, 20.0391 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Walls44"]
-occluder = SubResource( 1 )
+occluder = SubResource( 5 )
 
 [node name="ColorRect" type="ColorRect" parent="Walls44"]
 margin_right = 40.0
@@ -857,10 +857,10 @@ scale = Vector2( 1.53905, 1.57298 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls45"]
 position = Vector2( 20.0267, 20.0391 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Walls45"]
-occluder = SubResource( 1 )
+occluder = SubResource( 5 )
 
 [node name="ColorRect" type="ColorRect" parent="Walls45"]
 margin_right = 40.0
@@ -874,10 +874,10 @@ scale = Vector2( 1.53905, 1.57298 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls46"]
 position = Vector2( 20.0267, 20.0391 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Walls46"]
-occluder = SubResource( 1 )
+occluder = SubResource( 5 )
 
 [node name="ColorRect" type="ColorRect" parent="Walls46"]
 margin_right = 40.0
@@ -891,10 +891,10 @@ scale = Vector2( 1.53905, 1.57298 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls47"]
 position = Vector2( 20.0267, 20.0391 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Walls47"]
-occluder = SubResource( 1 )
+occluder = SubResource( 5 )
 
 [node name="ColorRect" type="ColorRect" parent="Walls47"]
 margin_right = 40.0
@@ -908,10 +908,10 @@ scale = Vector2( 1.53905, 1.57298 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls48"]
 position = Vector2( 20.0267, 20.0391 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Walls48"]
-occluder = SubResource( 1 )
+occluder = SubResource( 5 )
 
 [node name="ColorRect" type="ColorRect" parent="Walls48"]
 margin_right = 40.0
@@ -925,10 +925,10 @@ scale = Vector2( 1.53905, 1.57298 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls49"]
 position = Vector2( 20.0267, 20.0391 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Walls49"]
-occluder = SubResource( 1 )
+occluder = SubResource( 5 )
 
 [node name="ColorRect" type="ColorRect" parent="Walls49"]
 margin_right = 40.0
@@ -942,10 +942,10 @@ scale = Vector2( 1.53905, 1.57298 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls50"]
 position = Vector2( 20.0267, 20.0391 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Walls50"]
-occluder = SubResource( 1 )
+occluder = SubResource( 5 )
 
 [node name="ColorRect" type="ColorRect" parent="Walls50"]
 margin_right = 40.0
@@ -959,10 +959,10 @@ scale = Vector2( 1.53905, 1.57298 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls51"]
 position = Vector2( 20.0267, 20.0391 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Walls51"]
-occluder = SubResource( 1 )
+occluder = SubResource( 5 )
 
 [node name="ColorRect" type="ColorRect" parent="Walls51"]
 margin_right = 40.0
@@ -976,10 +976,10 @@ scale = Vector2( 1.53905, 1.57298 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls52"]
 position = Vector2( 20.0267, 20.0391 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Walls52"]
-occluder = SubResource( 1 )
+occluder = SubResource( 5 )
 
 [node name="ColorRect" type="ColorRect" parent="Walls52"]
 margin_right = 40.0
@@ -993,10 +993,10 @@ scale = Vector2( 1.53905, 1.57298 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls53"]
 position = Vector2( 20.0267, 20.0391 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Walls53"]
-occluder = SubResource( 1 )
+occluder = SubResource( 5 )
 
 [node name="ColorRect" type="ColorRect" parent="Walls53"]
 margin_right = 40.0
@@ -1010,10 +1010,10 @@ scale = Vector2( 1.53905, 1.57298 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls54"]
 position = Vector2( 20.0267, 20.0391 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Walls54"]
-occluder = SubResource( 1 )
+occluder = SubResource( 5 )
 
 [node name="ColorRect" type="ColorRect" parent="Walls54"]
 margin_right = 40.0
@@ -1027,10 +1027,10 @@ scale = Vector2( 1.53905, 1.57298 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls55"]
 position = Vector2( 20.0267, 20.0391 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Walls55"]
-occluder = SubResource( 1 )
+occluder = SubResource( 5 )
 
 [node name="ColorRect" type="ColorRect" parent="Walls55"]
 margin_right = 40.0
@@ -1044,10 +1044,10 @@ scale = Vector2( 1.53905, 1.57298 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls56"]
 position = Vector2( 20.0267, 20.0391 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Walls56"]
-occluder = SubResource( 1 )
+occluder = SubResource( 5 )
 
 [node name="ColorRect" type="ColorRect" parent="Walls56"]
 margin_right = 40.0
@@ -1061,10 +1061,10 @@ scale = Vector2( 1.53905, 1.57298 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls57"]
 position = Vector2( 20.0267, 20.0391 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Walls57"]
-occluder = SubResource( 1 )
+occluder = SubResource( 5 )
 
 [node name="ColorRect" type="ColorRect" parent="Walls57"]
 margin_right = 40.0
@@ -1078,10 +1078,10 @@ scale = Vector2( 1.53905, 1.57298 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls58"]
 position = Vector2( 20.0267, 20.0391 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Walls58"]
-occluder = SubResource( 1 )
+occluder = SubResource( 5 )
 
 [node name="ColorRect" type="ColorRect" parent="Walls58"]
 margin_right = 40.0

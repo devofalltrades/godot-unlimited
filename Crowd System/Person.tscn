@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Person.gd" type="Script" id=1]
+[ext_resource path="res://shadow.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 10, 5 )
+
+[sub_resource type="CanvasItemMaterial" id=2]
+
+[node name="Person" type="KinematicBody2D"]
+scale = Vector2( 0.596042, 0.565041 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -10 )
+z_index = 1
+shape = SubResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="CollisionShape2D"]
+margin_left = -10.0028
+margin_top = -10.0
+margin_right = 29.9972
+margin_bottom = 30.0
+rect_scale = Vector2( 0.500335, 0.500335 )
+color = Color( 0.0588235, 0.556863, 1, 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.305882 )
+material = SubResource( 2 )
+scale = Vector2( 0.0679839, 0.0623533 )
+texture = ExtResource( 2 )
